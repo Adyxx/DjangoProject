@@ -24,20 +24,7 @@ class AnimalDetailView(DetailView):
     context_object_name = 'animal_detail'  
     template_name = 'detail.html' 
 
-
-class TypeListView(ListView):
-    model = Animal
-    template_name = 'type_list.html'
-    context_object_name = 'type'
-    queryset = Animal.objects.order_by('name').all()
-
-
-class GalleryView(ListView):
-    model = Animal
-    template_name = 'gallery.html'
-    context_object_name = 'gallery'
-
-
+ 
 class AnimalListView(ListView):
     model = Animal
     template_name = 'index.html'
@@ -57,4 +44,19 @@ class UpdateAnimal(UpdateView):
 class DeleteAnimal(DeleteView):
     model = Animal
     success_url = reverse_lazy('animals')
+
+
+# WIP 
+class TypeListView(ListView):
+    model = Animal
+    template_name = 'type_list.html'
+    context_object_name = 'type'
+    queryset = Animal.objects.order_by('name').all()
+
+
+class GalleryView(ListView):
+    model = Animal
+    template_name = 'gallery.html'
+    context_object_name = 'gallery'
+
 
