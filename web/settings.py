@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'app',
+    'bootstrap_pagination',
+    'widget_tweaks',
 ]
 
 MIDDLEWARE = [

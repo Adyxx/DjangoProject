@@ -1,0 +1,137 @@
+{% extends "base.html" %}
+{% block title %}Details{% endblock %}
+{% block css %}
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-lg-12 mb-3"> 
+        <h1 style="text-align: center;">Work in progress ...</h1>
+    </div>
+</div>
+
+<div style="margin-left: 22%; margin-right: 22%;">
+    <div id="oneonehover" style="background-color: #c9ccd1;margin-left: 10px;margin-right: 10px;padding: 8px;">
+    
+        <div class="row">
+            <div class="col-lg-2">
+                <h5 style="margin-left: 30px; margin-right: 30px"><b>Mammals</b></h5>
+            </div>
+        </div>
+        
+    </div>
+
+    <div style="margin-left: 30px; margin-right: 30px;padding: 0.5px;padding-top: 10px;" id="oneoneslide">
+        <div>
+            <p class="text-justify">  </p>
+        </div>
+    </div>
+
+    <div id="onetwohover" style="margin-left: 10px;margin-right: 10px;padding: 8px;">
+
+        <div class="row">
+            <div class="col-lg-2">
+                <h5 style="margin-left: 30px; margin-right: 30px"><b>Birds</b></h5>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="onetwoslide" style="padding: 0.5px;padding-top: 10px;">
+
+        <div>
+            <p class="text-justify">   </p>
+        </div>
+
+    </div>
+
+
+    <div id="onethreehover" style="background-color: #c9ccd1;margin-left: 10px;margin-right: 10px;padding: 8px;">
+
+        <div class="row">
+            <div class="col-lg-2">
+                <h5 style="margin-left: 30px; margin-right: 30px"><b>Reptiles</b></h5>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="onethreeslide" style="padding: 0.5px;padding-top: 10px;">
+        <div>
+            <p class="text-justify">   </p>
+
+        </div>
+    </div>
+
+    <div id="onefourhover" style="margin-left: 10px;margin-right: 10px;padding: 8px;">
+    
+        <div class="row">
+            <div class="col-lg-2">
+                <h5 style="margin-left: 30px; margin-right: 30px"><b>Fish</b></h5>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="onefourslide">
+        <div>
+            <p class="text-justify">   </p>
+        </div>
+
+    </div>
+    <div id="onethreehover" style="background-color: #c9ccd1;margin-left: 10px;margin-right: 10px;padding: 8px;">
+
+        <div class="row">
+            <div class="col-lg-2">
+                <h5 style="margin-left: 30px; margin-right: 30px"><b>Amphibians</b></h5>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="onethreeslide" style="padding: 0.5px;padding-top: 10px;">
+        <div>
+            <p class="text-justify">   </p>
+
+        </div>
+    </div>
+    <div id="onefourhover" style="margin-left: 10px;margin-right: 10px;padding: 8px;">
+    
+        <div class="row">
+            <div class="col-lg-2">
+                <h5 style="margin-left: 30px; margin-right: 30px"><b>Invertebrates</b></h5>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="onefourslide">
+        <div>
+            <p class="text-justify">   </p>
+        </div>
+
+    </div>
+
+
+</div>
+
+
+
+
+
+
+{% endblock %}
+
+{% block scripts %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
+<script>
+    $(document).on("click", '[data-toggle="lightbox"]', function(event) {
+        event.preventDefault();
+        $(this).ekkoLightbox();
+    });
+</script>
+{% endblock %}

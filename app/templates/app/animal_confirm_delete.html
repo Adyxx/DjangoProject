@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block title %}Delete animal{% endblock %}
+
+{% block content %}
+
+<style>
+.click_me {
+    border: 2px solid black;
+    background-color: lightcoral;
+    color: black;
+    border-radius: 12px;
+    padding: 8px 20px;
+    font-weight: 500;
+
+}
+
+.click_me:hover {
+    background-color: indianred;
+}
+</style>
+
+<div class="row mb-3">
+    <div style="top: -30px; background-color: skyblue;" class="col-sm-12">
+        <h2 style="font-family: 'Cinzel', serif; font-size: 40px; margin-top: 7px;" class="text-center">Delete animal</h2>
+    </div>
+</div>
+
+
+<div style="margin-left: 22%; margin-right: 22%;">
+    <p class="text-center">Do you really want to delete this animal: <b><i>{{ animal }}</i></b>? </p>
+
+    <form style="margin-left: 22%; margin-right: 22%;" action="" method="POST">
+        {% csrf_token %}
+        <div class="row mb-3">
+            <div class="col-sm-12 text-center">
+                <input class="btn click_me" type="submit" value="  Delete  ">
+            </div>
+        </div>
+       
+    
+      </form>
+
+
+
+</div>
+
+
+{% endblock %}

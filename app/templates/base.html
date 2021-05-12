@@ -1,0 +1,63 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <title>{% block title %}App{% endblock %}</title> 
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"> 
+    <!-- Add additional CSS in static file -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+
+    {% load static %} 
+    <link rel="stylesheet" href="{% static 'css/css.css' %}"> 
+
+</head> 
+<body>
+  <header class="jumbotron-fluid text-center" style=" border: black 2px solid;padding: 50px; font-family: 'Cinzel', serif;">
+
+    <p style="font-size:50px">Database of animals</p>
+
+  </header>
+
+    <nav class="navbar navbar-expand-sm navbar-dark" style="top:-30px;background-color: black;">
+      <a class="navbar-brand" href="{% url 'index' %}">{% load static %} <img class="symbol"src="{% static 'images/symbol.png' %}" /></a>
+
+      <div>
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+              <li class="nav-item">
+                  <a class="nav-link" href="{% url 'index' %}">Home page</a>
+              </li>
+              <li class="nav-item ">
+                  <a class="nav-link" href="{% url 'animal-type'%}">Animal Types</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="{% url 'gallery'%}">Gallery</a>
+              </li>
+
+              <li style="position: absolute; right: 10px; background-color: white; border-radius: 5px;" class="nav-item">
+                <a style="color: black;" class="nav-link" href="{% url 'add-animal' %}"><b>Add new animal</b></a>
+            </li>
+          </ul>
+      </div>
+
+    </nav>
+
+<div class="container-fluid"> 
+    {% block content %}{% endblock %} 
+</div> 
+<footer class="container-fluid text-center"> 
+    <hr> 
+    <p>Adam Štencl &copy; - 2021</p> 
+</footer> 
+<!-- jQuery library --> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+<!-- Popper JS --> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script> 
+<!-- Latest compiled JavaScript --> 
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script> 
+{% block scripts %}{% endblock %} 
+</body> 
+</html> 
